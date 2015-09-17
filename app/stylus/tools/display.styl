@@ -1,0 +1,28 @@
+// Display
+// ===============================================
+
+borderbox-all()
+	*, *:before, *:after
+		box-sizing border-box
+
+hide()
+	display none
+
+table(tablelayout = false)
+	display table
+	width 100%
+	if tablelayout
+		table-layout auto
+	else
+		table-layout fixed
+	
+tablecell(aligncenter = false)
+	display table-cell 
+	if aligncenter
+		vertical-align middle
+	else
+		vertical-align top
+
+
+.hide 
+	hide()

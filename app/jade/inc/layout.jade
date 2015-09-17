@@ -1,0 +1,15 @@
+block vars
+
+doctype html
+// Front-end by Ilkya Komichev
+// ilko.me
+html(lang="ru")
+	include head
+
+	body.page-body
+		.ilkome.js-ilkome
+			include l-left
+			.l-content
+				block content
+
+	include scripts

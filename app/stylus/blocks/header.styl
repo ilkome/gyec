@@ -1,0 +1,134 @@
+.header 
+	background #242424 url("../img/header-bg.jpg") 0 top no-repeat
+	background-size cover
+	&-in
+		@extend .wrap
+		width 460px
+
+.header-logo
+	&-in
+		@extend .wrap
+		width 460px
+		padding 20px 0
+		padding-top 30px
+		
+		@media md
+			padding 30px
+			padding-top 40px
+
+	&_pic
+		margin 10px
+		margin-left 0
+		margin-bottom 0
+		display block
+		width 102px
+		height 36px
+		padding 0
+		border none
+		background url("../img/logo.png") no-repeat
+
+		@media xdpi
+			background url("../img/logo@2x.png") no-repeat
+			background-size 100% 100%
+			
+.header-info
+	dt()
+	padding 30px 20px
+	
+	@media sm
+		padding-top 40px
+		padding-bottom 40px
+	
+	@media md
+		padding-left 30px
+		padding-right 30px
+		
+	&_ava
+		width 200px
+		height 200px
+		margin 0 auto
+		background #242424 url("../img/avatar.jpg") center center no-repeat
+		background-size 110% 110%
+		border-radius 50%
+		border 3px solid alpha(#000, .2)
+		
+		@media sm
+			//width 80px
+			//height 80px
+	
+		@media md
+			width 200px
+			height 200px
+			border 4px solid alpha(#fff, .1)
+	
+	&_text
+		text-align center
+		padding-top 30px
+		padding-bottom 1px
+		color alpha(c-white, .7)
+		font-size 12px
+		line-height 16px
+		
+		@media sm
+			padding-bottom 0
+			font-size 15px
+			line-height 20px
+		
+		@media md
+			padding-left 30px
+			font-size 18px
+			line-height 26px
+
+.header-menu
+	lino()
+	text-align center
+	padding 27px 0px 20px 0px
+	border-top 1px solid alpha(c-white, .1)
+	
+	@media md
+		position absolute
+		right 30px
+		top -60px
+		padding 0
+		border none
+	
+	&_i
+		display inline-block
+		padding-left 10px
+		padding-right 10px
+		
+		@media sm
+			padding-right 25px
+			
+		@media md
+			padding-right 0
+			padding-left 30px
+			
+	&_a
+		display block
+		padding-bottom 4px
+		margin-bottom 10px
+		font-size 14px
+		line-height 16px
+		color alpha(c-white, .9)
+		tdn()
+		border-bottom 1px solid transparent
+		anim()
+		
+		@media sm
+			font-size 18px
+			padding-bottom 5px
+			margin-bottom 8px
+		
+		@media md
+			font-size 18px
+			padding-bottom 7px
+		
+		&:hover
+			color c-white
+			border-color c-white
+			border-bottom 1px solid alpha(c-white, .7)
+
+		&:focus
+			color c-orange
+			border-bottom 1px solid alpha(c-orange, .7)
