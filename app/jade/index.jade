@@ -5,19 +5,28 @@ block append content
 		.about-in
 			h2.s-title.s-title_short About us
 			.about-text
-				p Though there are a wide variety of competitions available for university students – we feel that it is especially crucial for those with entrepreneurial spirit to be able to express their ideas and develop their talents in this field. 
+				p Though there are a wide variety of competitions available for university students – we feel that it is especially crucial for those with entrepreneurial spirit to be able to express their ideas and develop their talents in this field.
 				p Thus, the Global Young Entrepreneurs Competition (GYEC) was founded on the premise of encouraging young entrepreneurship across the globe.
-		
+
 	.requir.js-menu-watch#requir
 		.requir-in
 			.requir-inin
 				.requir-ininin
 					h2.s-title Entry Requirements
 					.requir-content
-						.requir-el Competitors will be required to submit an entrepreneurial <br>‘pitch’ of not more than 2,000 words.
+						.requir-el Competitors will be required to submit an entrepreneurial ‘pitch’ of not more than 2,000 words.
+
 						.requir-el The purpose of this ‘pitch’ is to be able to sell the judging panel a sound entrepreneurial business model. Students should imagine that they are attempting to convince a board of venture capitalists to fund their start-up project to pursue in real life.
+
 						.requir-el As such, contestants should articulate their ideas clearly, and also demonstrate a degree of financial planning. For example, basic calculations of initial capital requirements or average running costs would be encouraged.
-						.requir-el Importantly, these pitches can be for either <br>for-profit or not-for-profit ideas. 
+
+						.requir-el Importantly, these pitches can be for either for-profit or not-for-profit ideas. 
+
+						.requir-el The use of diagrams, charts, spreadsheets and other forms of visual data and/or analysis is allowed and encouraged if students feel that the inclusion of such will strengthen their overall persuasiveness.
+
+						.requir-el You must be a full-time student studying in the United Kingdom in order to enter the competition. 
+						.requir-el There is no age limit to the competition, but it is primarily aimed at sixth form students looking to apply to university within the same academic year.
+						.requir-el There is no restriction on the number of entries that each school can submit, and students can apply either through their schools or as individual entrants.
 
 	.tabsbox.js-menu-watch#terms
 		.tabsbox-in
@@ -30,63 +39,42 @@ block append content
 						li.tabsbox-nav-el: a(href="#term-3") Adherence to the rules
 						li.tabsbox-nav-el: a(href="#term-4") General rules
 				.tabsbox-right
+					mixin tabsbox-list-el(num, text, className)
+						if className
+							- var className = "tabsbox-list-title"
+						
+						li(class=className) 
+							span= num 
+							| #{text}
+
 					.tab#term-1
 						ul.tabsbox-list
-							li.tabsbox-list-title
-								span 01
-								| Copyright and plagiarism
-							li
-								span 1.1
-								| Participants found to have committed copyright infringement in their work will be disqualified.
-							li
-								span 1.2
-								| Participants found to have committed copyright infringement in their work will be disqualified.
-							li
-								span 1.3
-								| Participants found to have committed copyright infringement in their work will be disqualified.
+							+tabsbox-list-el("1", "Copyright and plagiarism", "title")
+							+tabsbox-list-el("1.1", "Participants found to have committed copyright infringement in their work will be disqualified.")
+							+tabsbox-list-el("1.2", "Participants found to have committed acts of plagiarism in their work will be disqualified.")
+							+tabsbox-list-el("1.3", "Direct assistance by teachers, parents or other people is not allowed.")
 					.tab#term-2
 						ul.tabsbox-list
-							li.tabsbox-list-title
-								span 02
-								| Use of information
-							li
-								span 2.1
-								| Participants found to have committed copyright infringement in their work will be disqualified.
-							li
-								span 2.2
-								| Participants found to have committed copyright infringement in their work will be disqualified.
-							li
-								span 2.3
-								| Participants found to have committed copyright infringement in their work will be disqualified.
+							+tabsbox-list-el("2.", "Use of information", "title")
+							+tabsbox-list-el("2.1", "All information including personal data of the competitors, including the disclosure and transfer thereof to the judges and the media where necessary, will be used by the organiser strictly for purposes relating to the Competition.")
+							+tabsbox-list-el("2.2", "All information including personal data and images of the competitors may also be used for publicising the event.")
+							+tabsbox-list-el("2.3", "All information including personal data of the competitors will be stored and kept by the organiser for a period of 12 months from the date when such data is collected.")
+							+tabsbox-list-el("2.4", "The organiser shall own all rights in and arising from all works submitted for the Competition including, without limitation, the copyrights thereon. Work submitted will not be returned to participants.")
+							+tabsbox-list-el("2.5", "All participants whose entry forms have been duly completed and submitted may have their names published on the official website and/or official publication.")
+							+tabsbox-list-el("2.6", "Competitors may be requested to attend some publicity campaigns, e.g. promotion activities and media interviews, etc.")
 					.tab#term-3
 						ul.tabsbox-list
-							li.tabsbox-list-title
-								span 03
-								| Adherence to the rules
-							li
-								span 2.1
-								| Participants found to have committed copyright infringement in their work will be disqualified.
-							li
-								span 2.2
-								| Participants found to have committed copyright infringement in their work will be disqualified.
-							li
-								span 2.3
-								| Participants found to have committed copyright infringement in their work will be disqualified.
-
+							+tabsbox-list-el("3.", "Adherence to the rules and regulations", "title")
+							+tabsbox-list-el("3.1", "Competitors must adhere to the rules and regulations set out for this competition. Competitors failing to abide the rules and regulations will be subject to disqualification, downgrading or other penalties")
+							+tabsbox-list-el("3.2", "The organiser has the final right in the interpretation and amendment of the rules and regulations.")
+							+tabsbox-list-el("3.3", "Participants will be notified of major amendments to the rules and regulations if necessary.")
 					.tab#term-4
 						ul.tabsbox-list
-							li.tabsbox-list-title
-								span 04
-								| General rules
-							li
-								span 2.1
-								| Participants found to have committed copyright infringement in their work will be disqualified.
-							li
-								span 2.2
-								| Participants found to have committed copyright infringement in their work will be disqualified.
-							li
-								span 2.3
-								| Participants found to have committed copyright infringement in their work will be disqualified.
+							+tabsbox-list-el("4.", "General rules", "title")
+							+tabsbox-list-el("4.1", "The organiser reserves the right to alter or modify the rules or schedule of the event if necessary or expedient.")
+							+tabsbox-list-el("4.2", "It is strictly forbidden for any participants to re-use any work that he/she has submitted in another competition. Violators will be disqualified.")
+							+tabsbox-list-el("4.3", "The decision of the judging panel on all results shall be final and conclusive. No appeals will be entertained.")
+							+tabsbox-list-el("4.4", "The organiser will not be responsible for any accidents, injuries or damage which might occur during participation in or attendance at this competition or any other related activities.")
 
 	.criterion.js-menu-watch#criterion
 		.criterion-in
@@ -97,11 +85,11 @@ block append content
 						.criterion-num
 							.criterion-num-in= num
 						.criterion-text= text
-				+criterion-el("I", "The judging for this competition will take place in two stages. The first stage is where all submissions are initially assessed by a panel of academics drawn from universities around the UK as well as by judges.")
+				+criterion-el("I", "The judging for this competition will take place in two stages. The first stage is where all submissions are initially assessed by a panel of academics drawn from universities around the UK as well as by judges drawn from relevant professions.")
 				+criterion-el("II", "From the first stage, there will be a shortlist of highly commended submissions that will subsequently be judged by the chief judging panel. The exact composition of this panel is still to be confirmed.")
 				+criterion-el("III", "All submissions will be judged anonymously to ensure that all candidates are assessed on the merit of their work and on no other criteria.")
-				+criterion-el("IV", "Substantively, there is no marking scheme that submissions will be judged by. However, as a rough guide for students, judges are looking for submissions that distinguish themselves according to their.")
-	
+				+criterion-el("IV", "Substantively, there is no marking scheme that submissions will be judged by. However, as a rough guide for students, judges are looking for submissions that distinguish themselves according to their originality, viability, sustainability and the opportunity for expansion. There is no preference between either for-profit or not-for-profit submissions.")
+
 	.judges
 		.judges-in
 			h2.s-title.s-title_black Judges
