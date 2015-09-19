@@ -36,7 +36,8 @@ $(function() {
 	var easyTabs = $(".js-tabs").easytabs({
 		panelActiveClass: "is-active",
 		tabActiveClass: "is-active",
-		tabs: "> div > ul > li"
+		tabs: "> div > ul > li",
+		updateHash: false
 	});
 
 
