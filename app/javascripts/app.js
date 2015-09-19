@@ -2,6 +2,35 @@
 
 $(function() {
 
+	// Custom Scrollbar
+	// ===============================================
+	var initCustomScrollbar = (function() {
+		var scrollContener = $(".js-scrollbar"),
+			ScrollHeight;
+
+		function getScrollHeight() {
+			var height;
+			if ($(window).height() < 650) {
+				height = 350;
+			} else {
+				height = $(window).height() - 300
+			}
+			return height 
+		}
+
+		scrollContener.mCustomScrollbar({
+			setHeight: getScrollHeight,
+			advanced: {
+				updateOnContentResize: true
+			}
+		});
+
+		$(window).on('resize', function() {
+			scrollContener.height(getScrollHeight);
+		});
+	})();
+
+
 	// Easytabs plugin
 	// ===============================================
 	var easyTabs = $(".js-tabs").easytabs({
