@@ -84,7 +84,24 @@ $(function() {
 		});
 	};
 
+	// Show left menu on load. Hide on scroll
+	// ===============================================
+	var leftShowHide = function() {
+		var $left = $(".j-left");
+		
+		if ($(window).scrollTop() >= 300) {
+			$left.removeClass("is-visible");
+		} else {
+			$left.addClass("is-visible");
+		}
+	}
+	leftShowHide();
+
+
+	// Scroll event
+	// ===============================================
 	 $(window).on('scroll', function() {
 		leftMenuSpy();
+		leftShowHide();
 	});
 });
