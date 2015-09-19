@@ -310,13 +310,7 @@ html {
 	.l-left {
 		width: 245px;
 	}
-}
 
-.l-left:hover .l-left-in {
-	width: 245px;
-}
-
-@media (min-height: 670px) and (min-width: 1800px) {
 	.l-left .l-left-in {
 		width: 245px;
 	}
@@ -337,8 +331,13 @@ html {
 	transition: 0.3s ease-out;
 }
 
+.l-left:hover .l-left-in,
+.l-left.is-visible .l-left-in {
+	width: 245px;
+}
+
 .l-logo {
-	display: block;
+	display: inline-block;
 	margin-left: 30px;
 	margin-bottom: 145px;
 	width: 53px;
@@ -349,7 +348,7 @@ html {
 .l-logo-text {
 	opacity: 0;
 	position: absolute;
-	right: -500px;
+	right: -200px;
 	top: 40px;
 	width: 103px;
 	height: 48px;
@@ -393,12 +392,14 @@ html {
 	margin-bottom: 70px;
 }
 
-.l-left:hover .l-menu-text {
+.l-left:hover .l-menu-text,
+.l-left.is-visible .l-menu-text {
 	opacity: 1;
 	right: 30px;
 }
 
-.l-left:hover .l-logo-text {
+.l-left:hover .l-logo-text,
+.l-left.is-visible .l-logo-text {
 	opacity: 1;
 	right: 30px;
 }
@@ -457,7 +458,7 @@ html {
 	width: 100px;
 	opacity: 0;
 	position: absolute;
-	right: -500px;
+	right: -300px;
 	top: 0px;
 	color: #fff;
 	font-family: 'Lato', sans-serif;
