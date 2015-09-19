@@ -475,6 +475,71 @@ html {
 	}
 }
 
+.mCustomScrollbar:hover .mCSB_scrollTools {
+	opacity: 1;
+}
+
+.mCustomScrollBox {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	max-width: 100%;
+}
+
+.mCSB_container {
+	overflow: hidden;
+	width: auto;
+	height: auto;
+	margin-right: 100px;
+}
+
+.mCSB_scrollTools {
+	position: absolute;
+	width: 50px;
+	height: auto;
+	left: auto;
+	top: 1px;
+	right: 0px;
+	bottom: 0px;
+	opacity: 0.3;
+	-webkit-transition: 0.3s ease-out;
+	transition: 0.3s ease-out;
+}
+
+.mCSB_draggerContainer {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0;
+	height: auto;
+}
+
+.mCSB_dragger {
+	z-index: 1;
+	width: 100%;
+	height: 30px;
+	cursor: pointer;
+}
+
+.mCSB_dragger_bar {
+	position: relative;
+	width: 5px;
+	height: 100%;
+	margin: 0px auto;
+	text-align: center;
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 50px;
+}
+
+.mCSB_draggerRail {
+	width: 5px;
+	height: 100%;
+	margin: 0px auto;
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 50px;
+}
+
 .about {
 	background: #222b3b url("../img/bg-about.jpg") center top no-repeat;
 	background-size: cover;
@@ -534,9 +599,15 @@ html {
 }
 
 .requir-ininin {
-	width: 480px;
+	width: 680px;
 	margin: 0 auto;
 	margin-top: -33px;
+	margin-bottom: 30px;
+}
+
+.requir .mCSB_container {
+	margin-right: 100px;
+	margin-left: 100px;
 }
 
 .requir-el {
@@ -569,6 +640,14 @@ html {
 	background: #e7c43a;
 }
 
+.tabsbox .mCSB_dragger_bar {
+	background-color: rgba(0,0,0,0.3);
+}
+
+.tabsbox .mCSB_draggerRail {
+	background-color: rgba(36,36,36,0.2);
+}
+
 .tabsbox-in {
 	display: table;
 	width: 100%;
@@ -588,7 +667,6 @@ html {
 	display: table-cell;
 	vertical-align: top;
 	width: 365px;
-	padding-top: 10px;
 }
 
 .tabsbox-nav {
@@ -662,10 +740,6 @@ html {
 .tabsbox-list li span {
 	display: inline-block;
 	width: 55px;
-}
-
-.tabsbox-text {
-	padding-top: 10px;
 }
 
 .tabsbox-text h3 {

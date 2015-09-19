@@ -1,34 +1,90 @@
 "use strict";
 
 $(function() {
-	$(".js-tabs").easytabs({
-		panelActiveClass: "is-active",
-		tabActiveClass: "is-active",
-		tabs: "> div > ul > li"
-	});
 
+	// Custom Scrollbar
+	// ===============================================
+	var initCustomScrollbar = (function() {
+		var scrollContener = $(".js-scrollbar"),
+			ScrollHeight;
 
-	$(".l-menu").find("a").on("click", function(e) {
-		e.preventDefault();
-		$(".l-menu").find("li").removeClass("is-active");
-		$(this).parent().addClass("is-active");
-		
-		var href = $(this).attr("href"),
-			id = $(href).offset().top
+		function getScrollHeight() {
+			var height;
+			if ($(window).height() < 650) {
+				height = 350;
+			} else {
+				height = $(window).height() - 300
+			}
+			return height 
+		}
 
-		$("html, body").stop().animate({
-			scrollTop: id
-		}, 300);
-	});
-
-
-	 $(window).on('scroll', function() {
-		$('.js-menu-watch').each(function() {
-			if($(window).scrollTop() >= $(this).offset().top - $(window).height() / 2) {
-				var id = $(this).attr('id');
-				$(".l-menu").find("li").removeClass("is-active");
-				$(".l-menu").find('a[href=#'+ id +']').parent().addClass('is-active');
+		scrollContener.mCustomScrollbar({
+			setHeight: getScrollHeight,
+			advanced: {
+				updateOnContentResize: true
 			}
 		});
+
+		$(window).on('resize', function() {
+			scrollContener.height(getScrollHeight);
+		});
+	})();
+
+
+	// Easytabs plugin
+	// ===============================================
+	var easyTabs = $(".js-tabs").easytabs({
+		panelActiveClass: "is-active",
+		tabActiveClass: "is-active",
+		tabs: "> div > ul > li",
+		updateHash: false
+	});
+
+
+	// Left menu scroll to block
+	// ===============================================
+	var leftMenuScroll = (function() {
+		var $menuLink = $(".j-leftMenu").find("a"),
+			$menuEl = $menuLink.parent();
+
+		$menuLink.on("click", function(e) {
+ 			e.preventDefault();
+			
+			var $this = $(this),
+				$thisEl = $this.parent(),
+				href = $this.attr("href"),
+				blockId = $(href).offset().top;
+
+			$menuEl.removeClass("is-active");
+			$thisEl.addClass("is-active");
+
+			$("html, body").stop().animate({
+				scrollTop: blockId
+			}, 300);
+		});
+	})();
+
+
+	// Spy left menu
+	// ===============================================
+	var leftMenuSpy = function() {
+		var $watchBlock = $('.js-menu-watch');
+
+		$watchBlock.each(function() {
+			var $this = $(this),
+				blockId = $this.attr('id'),
+				$menu = $(".j-leftMenu"),
+				$menuEl = $menu.find("li"),
+				$menuLink = $menuEl.find("a");
+			
+			if ($(window).scrollTop() >= $this.offset().top - $(window).height() / 2) {
+				$menuEl.removeClass("is-active");
+				$menu.find('a[href=#'+ blockId +']').parent().addClass('is-active');
+			}
+		});
+	};
+
+	 $(window).on('scroll', function() {
+		leftMenuSpy();
 	});
 });
