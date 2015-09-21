@@ -327,8 +327,8 @@ html {
 	height: 100%;
 	padding-top: 33px;
 	background: #1a1a1a;
-	-webkit-transition: 0.3s ease-out;
-	transition: 0.3s ease-out;
+	-webkit-transition: width 0.5s ease-in-out 0s;
+	transition: width 0.5s ease-in-out 0s;
 }
 
 .l-left:hover .l-left-in,
@@ -353,8 +353,8 @@ html {
 	width: 103px;
 	height: 48px;
 	background: url("../img/logo-text.png") no-repeat;
-	-webkit-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
 }
 
 @media (min-height: 670px) and (min-width: 1800px) {
@@ -450,8 +450,8 @@ html {
 	background: #383937;
 	border-radius: 5px;
 	line-height: 500px;
-	-webkit-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
 }
 
 .l-menu-text {
@@ -465,8 +465,8 @@ html {
 	font-size: 17px;
 	text-align: right;
 	color: #4f4f4f;
-	-webkit-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
 }
 
 @media (min-height: 670px) and (min-width: 1800px) {
@@ -696,8 +696,8 @@ html {
 	font-weight: 400;
 	line-height: 40px;
 	text-decoration: none;
-	-webkit-transition: all 0.3s ease-out;
-	transition: all 0.3s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
 }
 
 .tabsbox-nav-el a:hover {
