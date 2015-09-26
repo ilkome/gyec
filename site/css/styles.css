@@ -336,6 +336,18 @@ html {
 	width: 245px;
 }
 
+.l-left:hover .l-menu-text,
+.l-left.is-visible .l-menu-text {
+	opacity: 1;
+	right: 30px;
+}
+
+.l-left:hover .l-logo-text,
+.l-left.is-visible .l-logo-text {
+	opacity: 1;
+	right: 30px;
+}
+
 .l-logo {
 	display: inline-block;
 	margin-left: 30px;
@@ -348,7 +360,7 @@ html {
 .l-logo-text {
 	opacity: 0;
 	position: absolute;
-	right: -200px;
+	right: 200px;
 	top: 40px;
 	width: 103px;
 	height: 48px;
@@ -362,46 +374,6 @@ html {
 		opacity: 1;
 		right: 30px;
 	}
-}
-
-.l-content {
-	display: table-cell;
-	vertical-align: top;
-	height: 100%;
-}
-
-.s-title {
-	margin-bottom: 100px;
-	color: #fff;
-	font-family: 'Playfair Display', serif;
-	font-size: 40px;
-	font-weight: 400;
-	line-height: 30px;
-	text-align: center;
-}
-
-.s-title_black {
-	color: #000;
-}
-
-.s-title_short {
-	margin-bottom: 40px;
-}
-
-.s-title_middle {
-	margin-bottom: 70px;
-}
-
-.l-left:hover .l-menu-text,
-.l-left.is-visible .l-menu-text {
-	opacity: 1;
-	right: 30px;
-}
-
-.l-left:hover .l-logo-text,
-.l-left.is-visible .l-logo-text {
-	opacity: 1;
-	right: 30px;
 }
 
 .l-menu {
@@ -458,7 +430,7 @@ html {
 	width: 100px;
 	opacity: 0;
 	position: absolute;
-	right: -300px;
+	right: 200px;
 	top: 0px;
 	color: #fff;
 	font-family: 'Lato', sans-serif;
@@ -474,6 +446,34 @@ html {
 		opacity: 1;
 		right: 30px;
 	}
+}
+
+.l-content {
+	display: table-cell;
+	vertical-align: top;
+	height: 100%;
+}
+
+.s-title {
+	margin-bottom: 100px;
+	color: #fff;
+	font-family: 'Playfair Display', serif;
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 30px;
+	text-align: center;
+}
+
+.s-title_black {
+	color: #000;
+}
+
+.s-title_short {
+	margin-bottom: 40px;
+}
+
+.s-title_middle {
+	margin-bottom: 70px;
 }
 
 .mCustomScrollbar:hover .mCSB_scrollTools {
@@ -586,20 +586,20 @@ html {
 	background-size: cover;
 }
 
-.requir-in {
+.requir-in-1 {
 	margin: 0 auto;
 	padding-top: 110px;
 	padding-bottom: 80px;
 	text-align: center;
 }
 
-.requir-inin {
+.requir-in-2 {
 	width: 900px;
 	margin: 0 auto;
 	border: 20px solid rgba(0,0,0,0.05);
 }
 
-.requir-ininin {
+.requir-in-3 {
 	width: 680px;
 	margin: 0 auto;
 	margin-top: -33px;
