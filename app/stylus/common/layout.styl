@@ -18,7 +18,7 @@ html
 	position relative
 	max-width 1200px
 	margin 0 auto
-	
+
 .l-left
 	tablecell()
 	position relative
@@ -31,7 +31,7 @@ html
 		width 245px
 		.l-left-in
 			width 245px
-
+	
 	&-in
 		position relative
 		overflow hidden
@@ -45,9 +45,19 @@ html
 		background #1a1a1a
 		transition width 0.5s ease-in-out 0s
 
-.l-left:hover, .l-left.is-visible
+.l-left:hover,
+.l-left.is-visible
+	
 	.l-left-in
 		width 245px
+	
+	.l-menu-text
+		opacity 1
+		right 30px
+	
+	.l-logo-text
+		opacity 1
+		right 30px
 
 .l-logo
 	display inline-block
@@ -56,20 +66,70 @@ html
 	width 53px
 	height 63px
 	background url("../img/logo.png") no-repeat
-
-.l-logo-text
-	opacity 0
-	position absolute
-	right -200px
-	top 40px
-	width 103px
-	height 48px
-	background url("../img/logo-text.png") no-repeat
-	anim-all()
 	
-	@media big-screen
-		opacity 1
-		right 30px
+	&-text
+		opacity 0
+		position absolute
+		right 200px
+		top 40px
+		width 103px
+		height 48px
+		background url("../img/logo-text.png") no-repeat
+		anim-all()
+		
+		@media big-screen
+			opacity 1
+			right 30px
+
+.l-menu
+	display block
+	lino()
+	margin-left 55px
+	
+	li
+		position relative
+		&.is-active
+			.l-menu-bg
+				background #144fff !important
+			.l-menu-text
+				color white
+		
+		&:hover
+			.l-menu-bg
+				background white
+			.l-menu-text
+				color white
+	a
+		display block
+		padding-bottom 32px
+		tdn()
+	
+	&-bg
+		display inline-block
+		margin 0 auto
+		width 8px
+		height 8px
+		background #383937
+		border-radius 5px
+		line-height 500px
+		anim-all()
+	
+	&-text
+		width 100px
+		opacity 0
+		position absolute
+		right 200px
+		top 0px
+		color white
+		font-family fontLato
+		font-size 17px
+		text-align right
+		color #4f4f4f
+		anim-all()
+		
+		@media big-screen
+			opacity 1
+			right 30px
 
 .l-content
 	tablecell()
