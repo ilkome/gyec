@@ -287,7 +287,7 @@ html {
 	table-layout: fixed;
 	position: relative;
 	height: 100%;
-	min-width: 1366px;
+	min-width: 1300px;
 }
 
 .wrap {
@@ -491,7 +491,6 @@ html {
 	overflow: hidden;
 	width: auto;
 	height: auto;
-	margin-right: 100px;
 }
 
 .mCSB_scrollTools {
@@ -606,13 +605,9 @@ html {
 	margin-bottom: 30px;
 }
 
-.requir .mCSB_container {
-	margin-right: 100px;
-	margin-left: 100px;
-}
-
 .requir-el {
 	position: relative;
+	margin: 0 100px;
 	margin-bottom: 40px;
 	padding-bottom: 20px;
 	color: #fff;
