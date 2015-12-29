@@ -2,32 +2,58 @@
 
 $(function() {
 
-	// Custom Scrollbar
+	// Custom Scrollbars
 	// ===============================================
-	var initCustomScrollbar = (function() {
-		var scrollContener = $(".js-scrollbar"),
-			ScrollHeight;
+	(function() {
+	
+		// Scrollbar for elements
+		$(".js-scrollbar").mCustomScrollbar();
 
-		function getScrollHeight() {
-			var height;
-			if ($(window).height() < 650) {
-				height = 350;
-			} else {
-				height = $(window).height() - 300
-			}
-			return height 
-		}
-
-		scrollContener.mCustomScrollbar({
-			setHeight: getScrollHeight,
+		
+		// Scrollbar for requir
+		var scrollbarRequir = $(".js-scrollbar-requir");
+		scrollbarRequir.mCustomScrollbar({
+			setHeight: setHeightSBarRequir,
 			advanced: {
 				updateOnContentResize: true
 			}
 		});
 
+
 		$(window).on('resize', function() {
-			scrollContener.height(getScrollHeight);
+			scrollbarRequir.height(setHeightSBarRequir);
 		});
+
+
+		// Set height to scrollbar requir box 
+		function setHeightSBarRequir() {
+			var windowsHeight = $(window).height(),
+				$box = $(".js-requir"),
+				boxHeight = $box.height(),
+				scrollbarHeight = scrollbarRequir.height(),
+				boxPaddingHeight = boxHeight - scrollbarHeight,
+				minHeight = 650,
+				boxElementsHeight = 0,
+				boxFullHeight;
+				
+				scrollbarRequir.find(".js-requir-el").each(function() {
+					boxElementsHeight = boxElementsHeight + $(this).outerHeight(true);
+				});
+				boxFullHeight = boxElementsHeight + boxPaddingHeight;
+
+			if ( windowsHeight < minHeight ) {
+				return 300;
+			}
+
+			if ( windowsHeight > minHeight ) {
+				if ( windowsHeight < boxFullHeight ) {
+					return windowsHeight - boxPaddingHeight;
+				} else {
+					return boxElementsHeight;
+				}
+			}
+
+		}
 	})();
 
 
@@ -77,19 +103,20 @@ $(function() {
 				$menuEl = $menu.find("li"),
 				$menuLink = $menuEl.find("a");
 			
-			if ($(window).scrollTop() >= $this.offset().top - $(window).height() / 2) {
+			if ( $(window).scrollTop() >= $this.offset().top - $(window).height() / 2 ) {
 				$menuEl.removeClass("is-active");
 				$menu.find('a[href=#'+ blockId +']').parent().addClass('is-active');
 			}
 		});
 	};
 
+
 	// Show left menu on load. Hide on scroll
 	// ===============================================
 	var leftShowHide = function() {
 		var $left = $(".j-left");
 		
-		if ($(window).scrollTop() >= 300) {
+		if ( $(window).scrollTop() >= 300 ) {
 			$left.removeClass("is-visible");
 		} else {
 			$left.addClass("is-visible");
