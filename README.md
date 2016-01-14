@@ -8,5 +8,4 @@ http://ilko.me/works/gyec/index.html
 
 # ilkome gulp boilerplate
 https://github.com/ilkome/gulp-boilerplate/
-
-Version 3.0.0
+> Version 3.0.0
