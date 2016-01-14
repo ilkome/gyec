@@ -1,11 +1,10 @@
-# Gulp shik
-Version 3
+# GYEC: landing page
+> This project bases on ilkome gulp boilerplate
 
-Fronend base template
-
-Created by Ilya Komichev
-http://ilko.me
+Created by Ilya Komichev http://ilko.me
 
 
 ## Information
-http://ilko.me/gulp-3.html
+https://github.com/ilkome/gulp-boilerplate/
+
+Version 3.0.0
