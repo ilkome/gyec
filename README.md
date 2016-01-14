@@ -1,5 +1,5 @@
 # GYEC: landing page
-> This project bases on ilkome gulp boilerplate
+> This front-end project based on ilkome gulp boilerplate
 
 Created by Ilya Komichev http://ilko.me
 
